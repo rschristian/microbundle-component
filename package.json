@@ -1,0 +1,28 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "source": "src/index.js",
+  "main": "dist/example.js",
+  "module": "dist/example.module.js",
+  "exports": {
+      ".": "./dist/example.module.js",
+      "./categoryA": "./categoryA/dist/categoryA.module.js",
+      "./categoryB": "./categoryB/dist/categoryB.module.js",
+      "./": "./"
+  },
+  "license": "MIT",
+  "description": "Microbundle example",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "microbundle -f es && (cd categoryA && microbundle -f es) && (cd categoryB && microbundle -f es)"
+  },
+  "peerDependencies": {
+    "preact": "10.x"
+  },
+  "devDependencies": {
+    "microbundle": "0.13.0",
+    "preact": "10.5.12"
+  }
+}

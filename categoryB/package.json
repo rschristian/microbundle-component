@@ -1,0 +1,6 @@
+{
+  "name": "example_categoryB",
+  "main": "./dist/categoryB.js",
+  "module": "./dist/categoryB.module.js" 
+}
+
